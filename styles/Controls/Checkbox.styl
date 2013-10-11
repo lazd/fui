@@ -1,0 +1,56 @@
+$checkBoxSize = 18px
+$checkBoxLabelMargin = 6
+
+.fui-checkbox,
+.fui-radio
+	display: inline-block
+	position: relative
+	margin: $widgetMargin
+	height: $checkBoxSize
+
+	padding-left: $checkBoxSize + $checkBoxLabelMargin
+
+	color: $widgetFontColor
+
+	vertical-align: top
+
+	input[type="checkbox"],
+	input[type="radio"],
+	i
+		position: absolute
+		background: $widgetBackground
+
+		margin-left: -1*$checkBoxSize - $checkBoxLabelMargin
+
+	i
+		box-sizing: border-box
+		display: inline-block
+		width: $checkBoxSize
+		height: $checkBoxSize
+
+		color: $widgetBackground // Hide when unchecked
+		text-align: center
+		font-size: 18px
+		font-style: normal
+		line-height: 16px
+
+		cursor: pointer
+
+	input[type="checkbox"],
+	input[type="radio"]
+		opacity: 0.0001
+
+		&:checked + i
+			color: $widgetFontColor // Show when checked
+
+	&.fui-primary
+		background: transparent
+
+		i
+			color: $widgetBackgroundPrimary // Hide when unchecked
+			background: $widgetBackgroundPrimary
+
+.fui-checkbox
+	i
+		border-radius: 2px
+

@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+	<title>fui!</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="fui/fui.css">
+
+	<!-- IE Support -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--[if lt IE 9]>
+		<script src="fui/scripts/ie7/IE9.js"></script>
+	<![endif]-->
+
+	<!-- fui looks best against a black background -->
+	<style type="text/css">
+		body {
+			background: black;
+			color: rgb(150, 150, 150);
+			font-family: Helvetica;
+		}
+
+		h1 {
+			margin: 0 0 10px 0;
+		}
+	</style>
+</head>
+<body>
+
+<div class="well">
+	<h1>Button</h1>
+	<button class="fui-button">Button</button>
+	<button class="fui-button fui-primary">Button</button>
+</div>
+
+<div class="well">
+	<h1>Select</h1>
+	<label class="fui-select">
+		<select>
+			<option>First option</option>
+			<option selected>Second option</option>
+			<option>Third option</option>
+		</select>
+	</label>
+
+	<label class="fui-select fui-primary">
+		<select>
+			<option>First option</option>
+			<option selected>Second option</option>
+			<option>Third option</option>
+		</select>
+	</label>
+</div>
+
+<div class="well">
+	<h1>Radio Button</h1>
+	<label class="fui-radio"><input type="radio" name="option" checked><i>&#9679;</i> Radio One</label><br>
+	<label class="fui-radio"><input type="radio" name="option"><i>&#9679;</i> Radio Two</label><br>
+	<label class="fui-radio fui-primary"><input type="radio" name="option" checked><i>&#9679;</i> Radio One</label><br>
+	<label class="fui-radio fui-primary"><input type="radio" name="option"><i>&#9679;</i> Radio Two</label>
+</div>
+
+<div class="well">
+	<h1>Checkbox</h1>
+	<label class="fui-checkbox"><input type="checkbox" checked><i>&times;</i> Check One</label><br>
+	<label class="fui-checkbox"><input type="checkbox"><i>&times;</i> Check Two</label><br>
+	<label class="fui-checkbox fui-primary"><input type="checkbox" checked><i>&times;</i> Check One</label><br>
+	<label class="fui-checkbox fui-primary"><input type="checkbox"><i>&times;</i> Check Two</label>
+</div>
+
+<div class="well">
+	<h1>Text Field</h1>
+	<input class="fui-textField">
+	<input class="fui-textField fui-primary">
+</div>
+
+</body>
+</html>

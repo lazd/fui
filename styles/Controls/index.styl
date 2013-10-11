@@ -1,0 +1,49 @@
+.fui-button,
+.fui-select select,
+.fui-textField
+	display: inline-block
+	box-sizing: border-box;
+
+	height: $widgetHeight;
+
+	margin: $widgetMargin;
+
+	background: $widgetBackground
+
+	color: $widgetFontColor
+	font-family: $baseFont
+	font-size: $baseSize
+	font-weight: normal
+	text-decoration: none // Reset underline when used on a link
+	text-align: center
+	text-shadow: light
+
+	border: none
+	border-radius: $widgetBorderRadius
+
+	vertical-align: top // Line up correctly with buttons
+
+	-webkit-appearance: none // Remove browser styling
+
+@import 'Button'
+@import 'TextField'
+@import 'Select'
+@import 'Checkbox'
+@import 'RadioButton'
+
+.fui-button,
+.fui-select select
+	emboss()
+
+	&.fui-primary
+		embossPrimary()
+
+.fui-primary select
+	embossPrimary()
+
+.fui-primary,
+.fui-primary select
+	background: $widgetBackgroundPrimary
+
+	&:active
+		background: $widgetBackgroundPrimaryDown
