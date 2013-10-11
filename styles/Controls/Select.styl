@@ -14,14 +14,15 @@
 
 		pointer-events: none // Clicks pass through to select
 
+	select
+		// IE 8: Top and bottom padding of 10px is required to align the text vertically
+		padding: 10px 28px 10px 8px
+
+		cursor: pointer
+
 	&.fui-primary
-		background: transparent
+		&, &:active
+			background: transparent
 
-.fui-select select
-	// IE 8: Top and bottom padding of 10px is required to align the text vertically
-	padding: 10px 28px 10px 8px
-
-	cursor: pointer
-
-	&.fui-primary:active
-		background: $widgetBackgroundPrimary
+		select
+			background: $widgetBackgroundPrimary

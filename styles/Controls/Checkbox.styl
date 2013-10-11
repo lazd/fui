@@ -1,6 +1,3 @@
-$checkBoxSize = 18px
-$checkBoxLabelMargin = 6
-
 .fui-checkbox,
 .fui-radio
 	display: inline-block
@@ -13,6 +10,8 @@ $checkBoxLabelMargin = 6
 	color: $widgetFontColor
 
 	vertical-align: top
+
+	font-family: $baseFont
 
 	input[type="checkbox"],
 	input[type="radio"],
@@ -44,7 +43,8 @@ $checkBoxLabelMargin = 6
 			color: $widgetFontColor // Show when checked
 
 	&.fui-primary
-		background: transparent
+		&, &:active
+			background: transparent
 
 		i
 			color: $widgetBackgroundPrimary // Hide when unchecked

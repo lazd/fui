@@ -9,8 +9,14 @@
 
 	bevel()
 
+	border: 1px solid rgb(35, 35, 35)
+
 	&.fui-primary:active
 		background: $widgetBackgroundPrimary
+
+	&:invalid,
+	&.fui-invalid
+		border: 1px solid $textFieldErrorBorder
 
 .fui-textField::-webkit-input-placeholder
 	opacity: $textFieldPlacerholderColor;

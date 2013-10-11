@@ -1,0 +1,30 @@
+$alertInfoBackground = rgb(2, 50, 100)
+$alertSuccessBackground = rgb(2, 100, 50)
+$alertErrorBackground = rgb(100, 2, 2)
+$alertWarningBackground = rgb(100, 60, 2)
+
+.fui-error,
+.fui-warning,
+.fui-info,
+.fui-success,
+.fui-alert
+	margin: $widgetMargin * 2
+	padding: $widgetMargin * 1.5
+
+	font-family: $baseFont
+
+	border-radius: $widgetBorderRadius
+
+.fui-info,
+.fui-alert
+	background: $alertInfoBackground
+
+.fui-success
+	background: $alertSuccessBackground
+
+.fui-error
+	background: $alertErrorBackground
+
+.fui-warning
+	background: $alertWarningBackground
+
