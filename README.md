@@ -44,3 +44,5 @@ fui aims to look great on modern browsers and degrade gracefully. You'll find fu
 ## License
 
 [BSD license], Copyright &copy; 2013 Larry Davis
+
+[BSD license]: https://github.com/lazd/fui/blob/master/LICENSE
