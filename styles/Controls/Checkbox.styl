@@ -50,6 +50,15 @@
 			color: $widgetBackgroundPrimary // Hide when unchecked
 			background: $widgetBackgroundPrimary
 
+	input:focus + i
+		width: $checkBoxSize + 2
+		height: $checkBoxSize + 2
+
+		margin: -1px
+		margin-left: -1*$checkBoxSize - $checkBoxLabelMargin - 1
+
+		glow()
+
 .fui-checkbox
 	i
 		border-radius: 2px
