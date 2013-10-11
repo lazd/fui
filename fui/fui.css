@@ -1,0 +1,49 @@
+/*! fui - v0.0.1 - 2013-10-11
+* http://lazd.github.io/fui/
+* Copyright (c) 2013 Larry Davis <lazdnet@gmail.com>; Licensed BSD */
+.fui-progress{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;height:20px;min-width:100px;margin:10px;-webkit-border-radius:5px;border-radius:5px;border:1px solid #464646;background:#141414;overflow:hidden;}
+.fui-progress .fui-progressBar{background:#19327d;height:18px}
+.fui-badge{display:inline-block;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;background:#474747;-webkit-border-radius:10px;border-radius:10px;padding:2px 8px;min-width:26px;color:#969696;white-space:nowrap;font-weight:bold;font-size:12px;text-align:center}
+.fui-error,.fui-warning,.fui-info,.fui-success,.fui-alert{margin:20px;padding:15px;font-family:Helvetica,sans-serif;-webkit-border-radius:5px;border-radius:5px}
+.fui-info,.fui-alert{background:#023264}
+.fui-success{background:#026432}
+.fui-error{background:#640202}
+.fui-warning{background:#643c02}
+.fui-button,.fui-select select,.fui-textField{display:inline-block;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;height:40px;margin:10px;background:#323232;color:#787878;font-family:Helvetica,sans-serif;font-size:16px;font-weight:normal;text-decoration:none;text-align:center;text-shadow:0 -1px 0 rgba(0,0,0,0.25);border:none;-webkit-border-radius:5px;border-radius:5px;vertical-align:top;-webkit-appearance:none;}
+.fui-button:focus,.fui-select select:focus,.fui-textField:focus{outline:none;border:1px solid #4178b4;-webkit-box-shadow:0 0 5px #4178b4;box-shadow:0 0 5px #4178b4}
+.fui-button{padding:8px 12px;text-align:center;cursor:pointer;pointer-events:auto;-webkit-box-shadow:inset 1px 1px 1px #3c3c3c;box-shadow:inset 1px 1px 1px #3c3c3c;}
+.fui-button:active{background:#2d2d2d}
+.fui-button:focus{margin-left:9px;margin-right:9px}
+.fui-textField{padding:10px 10px;text-align:left;cursor:text;-webkit-box-shadow:inset 1px 1px 1px #1b1b1b;box-shadow:inset 1px 1px 1px #1b1b1b;-webkit-box-shadow:inset 1px 1px 1px #1e1e1e;box-shadow:inset 1px 1px 1px #1e1e1e;border:1px solid #232323;}
+.fui-textField.fui-primary:active{background:#193c78}
+.fui-textField:invalid,.fui-textField.fui-invalid{border:1px solid #500000}
+.fui-textField::-webkit-input-placeholder{opacity:.35;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=35)";filter:alpha(opacity=35)}
+.fui-textField:-moz-placeholder{opacity:.35;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=35)";filter:alpha(opacity=35)}
+.fui-textField::-moz-placeholder{opacity:.35;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=35)";filter:alpha(opacity=35)}
+.fui-select{display:inline-block;position:relative;}
+.fui-select:after{position:absolute;top:19px;right:20px;display:block;content:'▾';color:transparent;color:#787878;text-shadow:0 -1px 0 rgba(0,0,0,0.25);pointer-events:none}
+.fui-select select{padding:10px 28px 10px 8px;cursor:pointer;}
+.fui-select select:focus{margin-left:9px;margin-right:9px}
+.fui-select.fui-primary,.fui-select.fui-primary:active{background:transparent}
+.fui-select.fui-primary select{background:#193c78}
+.fui-checkbox,.fui-radio{display:inline-block;position:relative;margin:10px;height:18px;padding-left:24px;color:#787878;vertical-align:top;font-family:Helvetica,sans-serif;}
+.fui-checkbox input[type="checkbox"],.fui-radio input[type="checkbox"],.fui-checkbox input[type="radio"],.fui-radio input[type="radio"],.fui-checkbox i,.fui-radio i{position:absolute;background:#323232;margin-left:-24px}
+.fui-checkbox i,.fui-radio i{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;display:inline-block;width:18px;height:18px;color:#323232;text-align:center;font-size:18px;font-style:normal;line-height:16px;cursor:pointer}
+.fui-checkbox input[type="checkbox"],.fui-radio input[type="checkbox"],.fui-checkbox input[type="radio"],.fui-radio input[type="radio"]{opacity:.0001;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter:alpha(opacity=0);}
+.fui-checkbox input[type="checkbox"]:checked + i,.fui-radio input[type="checkbox"]:checked + i,.fui-checkbox input[type="radio"]:checked + i,.fui-radio input[type="radio"]:checked + i{color:#787878}
+.fui-checkbox.fui-primary,.fui-radio.fui-primary,.fui-checkbox.fui-primary:active,.fui-radio.fui-primary:active{background:transparent}
+.fui-checkbox.fui-primary i,.fui-radio.fui-primary i{color:#193c78;background:#193c78}
+.fui-checkbox input:focus + i,.fui-radio input:focus + i{width:20px;height:20px;margin:-1px;margin-left:-25px;border:1px solid #4178b4;-webkit-box-shadow:0 0 5px #4178b4;box-shadow:0 0 5px #4178b4}
+.fui-checkbox i{-webkit-border-radius:2px;border-radius:2px}
+.fui-radio i{padding:1px;font-size:19px;line-height:15px;-webkit-border-radius:18px;border-radius:18px}
+.fui-button,.fui-select select{-webkit-box-shadow:inset 1px 1px 1px #3c3c3c;box-shadow:inset 1px 1px 1px #3c3c3c;}
+.fui-button.fui-primary,.fui-select select.fui-primary{-webkit-box-shadow:inset 1px 1px 1px #1b4891;box-shadow:inset 1px 1px 1px #1b4891}
+.fui-primary select{-webkit-box-shadow:inset 1px 1px 1px #1b4891;box-shadow:inset 1px 1px 1px #1b4891}
+.fui-primary{background:#193c78;}
+.fui-primary:active{background:#16366c}
+.fui-body{background:#000;color:#969696;font-family:Helvetica,sans-serif}
+.fui-box{display:table}
+.fui-col{display:table-cell}
+.fui-indent,.fui-well{margin:20px;padding:10px;-webkit-border-radius:5px;border-radius:5px;}
+.fui-indent h1:first-child,.fui-well h1:first-child{margin-top:0}
+.fui-well{background:#232323}

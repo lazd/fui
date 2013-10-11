@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+	<title>fui!</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="fui/fui.css">
+
+	<!-- IE Support -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--[if lt IE 9]>
+		<script src="fui/scripts/ie7/IE9.js"></script>
+	<![endif]-->
+</head>
+
+<body class="fui-body">
+
+	<div class="fui-well">
+		<h1>Button</h1>
+		<button class="fui-button">Button</button>
+		<button class="fui-button fui-primary">Button</button>
+	</div>
+
+	<div class="fui-well">
+		<h1>Select</h1>
+		<label class="fui-select">
+			<select>
+				<option>First option</option>
+				<option selected>Second option</option>
+				<option>Third option</option>
+			</select>
+		</label>
+
+		<label class="fui-select fui-primary">
+			<select>
+				<option>First option</option>
+				<option selected>Second option</option>
+				<option>Third option</option>
+			</select>
+		</label>
+	</div>
+
+	<div class="fui-well">
+		<h1>Radio Button</h1>
+
+		<div class="fui-box">
+			<div class="fui-col">
+				<label class="fui-radio"><input type="radio" name="option" checked><i>&#9679;</i> Radio One</label><br>
+				<label class="fui-radio"><input type="radio" name="option"><i>&#9679;</i> Radio Two</label><br>
+			</div>
+
+			<div class="fui-col">
+				<label class="fui-radio fui-primary"><input type="radio" name="option" checked><i>&#9679;</i> Radio One</label><br>
+				<label class="fui-radio fui-primary"><input type="radio" name="option"><i>&#9679;</i> Radio Two</label>
+			</div>
+		</div>
+	</div>
+
+	<div class="fui-well">
+		<h1>Checkbox</h1>
+
+		<div class="fui-box">
+			<div class="fui-col">
+				<label class="fui-checkbox"><input type="checkbox" checked><i>&times;</i> Check One</label><br>
+				<label class="fui-checkbox"><input type="checkbox"><i>&times;</i> Check Two</label><br>
+			</div>
+
+			<div class="fui-col">
+				<label class="fui-checkbox fui-primary"><input type="checkbox" checked><i>&times;</i> Check One</label><br>
+				<label class="fui-checkbox fui-primary"><input type="checkbox"><i>&times;</i> Check Two</label>
+			</div>
+		</div>
+	</div>
+
+	<div class="fui-well">
+		<h1>Text Field</h1>
+		<input class="fui-textField" placeholder="Enter your name"><br>
+		<input class="fui-textField fui-invalid">
+	</div>
+
+	<div class="fui-well">
+		<h1>Badge</h1>
+		<button class="fui-button">
+			Inbox <span class="fui-badge">4</span>
+		</button>
+	</div>
+
+	<div class="fui-well">
+		<h1>Alert</h1>
+
+		<div class="fui-success">
+			<strong>Success!</strong> All is well.
+		</div>
+
+		<div class="fui-info">
+			<strong>Hey, listen!</strong> This is useful information.
+		</div>
+
+		<div class="fui-error">
+			<strong>Error!</strong> Something broke
+		</div>
+
+		<div class="fui-warning">
+			<strong>Uh oh!</strong> Something may be wrong.
+		</div>
+	</div>
+
+	<div class="fui-well">
+		<h1>Progress Bar</h1>
+		<div class="fui-progress">
+			<div class="fui-progressBar" style="width: 33%"></div>
+		</div>
+	</div>
+</body>
+</html>
