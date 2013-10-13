@@ -12,7 +12,7 @@
 .fuicon-success:before{content:"\e006"}
 .fui-progress{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;height:20px;min-width:100px;margin:10px;-webkit-border-radius:5px;border-radius:5px;border:1px solid #323232;background:#141414;overflow:hidden;}
 .fui-progress .fui-progressBar{background:#19327d;height:18px}
-.fui-badge{display:inline-block;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;background:#474747;-webkit-border-radius:10px;border-radius:10px;padding:2px 8px;min-width:26px;color:#969696;white-space:nowrap;font-weight:bold;font-size:12px;text-align:center}
+.fui-badge{display:inline-block;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;background:#474747;-webkit-border-radius:10px;border-radius:10px;padding:2px 8px;color:#969696;white-space:nowrap;font-weight:bold;font-size:12px;text-align:center}
 .fui-error,.fui-warning,.fui-info,.fui-success,.fui-alert{margin:20px;padding:15px;font-family:Helvetica,sans-serif;-webkit-border-radius:5px;border-radius:5px}
 .fui-info,.fui-alert{background:#023264}
 .fui-success{background:#026432}
@@ -31,13 +31,13 @@
 .fui-textField::-moz-placeholder{opacity:.35;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=35)";filter:alpha(opacity=35)}
 .fui-select{display:inline-block;position:relative;}
 .fui-select:before{position:absolute;z-index:1;top:22px;right:16px;display:block;color:#787878;text-shadow:0 -1px 0 rgba(0,0,0,0.25);pointer-events:none}
-.fui-select select{padding:10px 28px 10px 8px;cursor:pointer;}
+.fui-select select{padding:10px 28px 10px 8px;cursor:pointer;text-align:left;}
 .fui-select select:focus{margin-left:9px;margin-right:9px}
 .fui-select.fui-primary,.fui-select.fui-primary:active{background:transparent}
 .fui-select.fui-primary select{background:#193c78}
-.fui-ie .fui-select select{padding-right:8px}
-.fui-ie .fui-select:before{display:none}
-.fui-lt-ie10 .fui-select select:focus{padding-top:9px;padding-bottom:9px}
+.fui-ie .fui-select select,.fui-ff .fui-select select{padding-right:8px}
+.fui-ie .fui-select:before,.fui-ff .fui-select:before{display:none}
+.fui-ff .fui-select select:focus,.fui-lt-ie10 .fui-select select:focus{padding-top:9px;padding-bottom:9px}
 .fui-checkbox,.fui-radio{display:inline-block;position:relative;margin:10px;height:18px;padding-left:24px;color:#787878;vertical-align:top;font-family:Helvetica,sans-serif;}
 .fui-checkbox input[type="checkbox"],.fui-radio input[type="checkbox"],.fui-checkbox input[type="radio"],.fui-radio input[type="radio"],.fui-checkbox i,.fui-radio i{position:absolute;background:#323232;margin-left:-24px}
 .fui-checkbox i,.fui-radio i{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;display:inline-block;overflow:hidden;width:18px;height:18px;color:#787878;text-align:center;font-size:14px;font-style:normal;line-height:20px;cursor:pointer;padding-left:18px}
