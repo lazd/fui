@@ -5,7 +5,7 @@ var fui = fui || {};
 	docClasses = docClasses ? docClasses.split(' ') : [];
 
 	// Detect Firefox
-	var ffMatch = navigator.userAgent.match(/Firefox\/([\da-z.]+)/)
+	var ffMatch = navigator.userAgent.match(/Firefox\/([\da-z.]+)/);
 	fui.ff = (ffMatch && ffMatch[1] - 0) || null;
 
 	if (ffMatch) {
@@ -15,7 +15,7 @@ var fui = fui || {};
 
 	// Detect IE
 	var ieMatch = navigator.appVersion.match(/MSIE (\d+\.\d+)/);
-	var ie11Match = navigator.userAgent.match(/Trident\/\d+\.\d+; rv[:\s](\d+\.\d)+/)
+	var ie11Match = navigator.userAgent.match(/Trident\/\d+\.\d+;.*? rv[:\s](\d+\.\d)+/);
 	fui.ie = (ieMatch && ieMatch[1] - 0) || (ie11Match && ie11Match[1] - 0) || null;
 
 	if (fui.ie) {
