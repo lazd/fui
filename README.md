@@ -35,7 +35,7 @@ See the included examples.
 fui aims to look great on modern browsers and degrade gracefully. You'll find fui works nicely with the following browsers:
 
 * IE 8+
-* Firefox
+* Firefox 3.6+
 * Chrome
 * Safari
 * iOS Safari

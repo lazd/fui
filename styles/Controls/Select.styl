@@ -16,10 +16,12 @@
 		pointer-events: none // Clicks pass through to select
 
 	select
-		// IE 8: Top and bottom padding of 10px is required to align the text vertically
+		// IE 8 & FF 24: Top and bottom padding of 10px is required to align the text vertically
 		padding: 10px 28px 10px 8px
 
 		cursor: pointer
+
+		text-align: left
 
 		&:focus
 			margin-left: $widgetMargin - 1
@@ -33,8 +35,9 @@
 			background: $widgetBackgroundPrimary
 
 // Hide the icon in IE, it has the menu button already
-// Observed: IE 8, IE 9, IE 10, IE 11, FF 3.6, FF 23
-.fui-ie
+// Observed: IE 8, IE 9, IE 10, IE 11, FF 3.6, FF 24
+.fui-ie,
+.fui-ff
 	.fui-select
 		select
 			padding-right: 8px
@@ -43,7 +46,8 @@
 			display: none;
 
 // Fix vertical shift of select menu on focus in IE
-// Observed: IE 8, IE 9
+// Observed: IE 8, IE 9, FF 24
+.fui-ff,
 .fui-lt-ie10
 	.fui-select
 		select:focus
