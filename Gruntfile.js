@@ -21,7 +21,7 @@ module.exports = function(grunt) {
 						'* <%= pkg.homepage %>/\n' +
 						'* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %>; Licensed <%= pkg.license %> */\n'
 			},
-			iocss: {
+			css: {
 				files: {
 					'build/fui/fui.css': 'build/fui/fui.css'
 				}
@@ -34,6 +34,12 @@ module.exports = function(grunt) {
 				src: ['**'],
 				dest: 'build/'
 			},
+			fonts: {
+				expand: true,
+				cwd: 'fonts/',
+				src: ['**'],
+				dest: 'build/fui/fonts/'
+			},
 			script: {
 				expand: true,
 				cwd: 'scripts/',
@@ -43,18 +49,22 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			stylus: {
-				files: ['styles/**/*.styl'],
-				tasks: 'stylus'
+				files: ['styles/**/*.styl', 'styles/**/*.css'],
+				tasks: ['stylus', 'concat']
+			},
+			scripts: {
+				files: ['scripts/**/*.js'],
+				tasks: 'copy'
 			},
 			examples: {
-				files: [ 'examples/**' ],
+				files: ['examples/**'],
 				tasks: 'copy'
 			}
 		}
 	});
 
 	// Default task
-	grunt.registerTask('default', ['stylus', 'concat', 'copy']);
+	grunt.registerTask('default', ['stylus', 'copy', 'concat']);
 
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-stylus');

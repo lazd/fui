@@ -1,6 +1,14 @@
 .fui-radio
 	i
-		padding: 1px
-		font-size: 19px
-		line-height: 15px
+		font-size: 15px
+		line-height: 20px
 		border-radius: $checkBoxSize
+
+		&:before
+			@extend .fuicon-dot:before
+
+// Radio button is shifted slightly downward in IE 8
+// Observed: IE 8
+.fui-lt-ie9
+	.fui-radio i
+		line-height: 19px

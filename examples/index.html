@@ -8,9 +8,13 @@
 
 	<!-- IE Support -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--[if IE]>
+		<script src="fui/scripts/ie.js"></script>
+	<![endif]-->
 	<!--[if lt IE 9]>
 		<script src="fui/scripts/ie7/IE9.js"></script>
 	<![endif]-->
+
 </head>
 
 <body class="fui-body">
@@ -45,13 +49,13 @@
 
 		<div class="fui-box">
 			<div class="fui-col">
-				<label class="fui-radio"><input type="radio" name="option" checked><i>&#9679;</i> Radio One</label><br>
-				<label class="fui-radio"><input type="radio" name="option"><i>&#9679;</i> Radio Two</label><br>
+				<label class="fui-radio"><input type="radio" name="option" checked><i></i> Radio One</label><br>
+				<label class="fui-radio"><input type="radio" name="option"><i></i> Radio Two</label><br>
 			</div>
 
 			<div class="fui-col">
-				<label class="fui-radio fui-primary"><input type="radio" name="option" checked><i>&#9679;</i> Radio One</label><br>
-				<label class="fui-radio fui-primary"><input type="radio" name="option"><i>&#9679;</i> Radio Two</label>
+				<label class="fui-radio fui-primary"><input type="radio" name="option"><i></i> Radio One</label><br>
+				<label class="fui-radio fui-primary"><input type="radio" name="option"><i></i> Radio Two</label>
 			</div>
 		</div>
 	</div>
@@ -61,13 +65,13 @@
 
 		<div class="fui-box">
 			<div class="fui-col">
-				<label class="fui-checkbox"><input type="checkbox" checked><i>&times;</i> Check One</label><br>
-				<label class="fui-checkbox"><input type="checkbox"><i>&times;</i> Check Two</label><br>
+				<label class="fui-checkbox"><input type="checkbox" name="checkBox1" checked><i></i> Check One</label><br>
+				<label class="fui-checkbox"><input type="checkbox" name="checkBox2"><i></i> Check Two</label><br>
 			</div>
 
 			<div class="fui-col">
-				<label class="fui-checkbox fui-primary"><input type="checkbox" checked><i>&times;</i> Check One</label><br>
-				<label class="fui-checkbox fui-primary"><input type="checkbox"><i>&times;</i> Check Two</label>
+				<label class="fui-checkbox fui-primary"><input type="checkbox" name="checkBox3" checked><i></i> Check One</label><br>
+				<label class="fui-checkbox fui-primary"><input type="checkbox" name="checkBox4"><i></i> Check Two</label>
 			</div>
 		</div>
 	</div>
@@ -97,7 +101,7 @@
 		</div>
 
 		<div class="fui-error">
-			<strong>Error!</strong> Something broke
+			<strong>Error!</strong> Something broke.
 		</div>
 
 		<div class="fui-warning">

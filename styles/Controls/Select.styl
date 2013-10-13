@@ -1,15 +1,15 @@
 .fui-select
-	display: inline-block
 	position: relative
 
-	&:after
+	&:before
+		@extend .fuicon-menu:before
+
 		position: absolute
-		top: 19px
-		right: 20px
+		z-index: 1
+		top: 22px
+		right: 19px
 		display: block
-		content: '▾'
-		color: transparent
-		color: rgba($widgetFontColor, 1)
+		color: $widgetFontColor
 		text-shadow: light
 
 		pointer-events: none // Clicks pass through to select
@@ -30,3 +30,21 @@
 
 		select
 			background: $widgetBackgroundPrimary
+
+// Hide the icon in IE, it has the menu button already
+// Observed: IE 8, IE 9, IE 10, Win FF 3.6
+.fui-ie
+	.fui-select
+		select
+			padding-right: 8px
+
+		&:before
+			display: none;
+
+// Fix vertical shift of select menu on focus in IE
+// Observed: IE 8, IE 9
+.fui-lt-ie10
+	.fui-select
+		select:focus
+			padding-top: 9px
+			padding-bottom: 9px
