@@ -1,4 +1,5 @@
 .fui-select
+	display: inline-block
 	position: relative
 
 	&:before
@@ -7,7 +8,7 @@
 		position: absolute
 		z-index: 1
 		top: 22px
-		right: 19px
+		right: 16px
 		display: block
 		color: $widgetFontColor
 		text-shadow: light
@@ -32,7 +33,7 @@
 			background: $widgetBackgroundPrimary
 
 // Hide the icon in IE, it has the menu button already
-// Observed: IE 8, IE 9, IE 10, Win FF 3.6
+// Observed: IE 8, IE 9, IE 10, IE 11, FF 3.6, FF 23
 .fui-ie
 	.fui-select
 		select
