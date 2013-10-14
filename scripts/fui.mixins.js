@@ -17,8 +17,9 @@ fui.mixins.getTypes = function(classPrefix) {
 	}
 	while (matches);
 
-	if (matched)
-		this.fui.types[classPrefix] = types;
+	if (!matched)
+		return null;
 
-	return this.fui.types;
+	this.fui.types[classPrefix] = types;
+	return types;
 };

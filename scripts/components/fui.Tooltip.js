@@ -32,36 +32,66 @@
 		var types = this.getTypes('tooltip');
 
 		// Don't bother with non-tooltips, elements not in the DOM, or invisible elements
-		if (!types.tooltip || !this.parentNode || !$el.is(':visible')) return;
-
-		this.parentNode.visbility = 'hidden';
+		if (!types || !this.parentNode || !$el.is(':visible')) return;
 
 		var winWidth = fui.$(window).width();
 		var winHeight = fui.$(window).height();
 
-		var tooltipRect = this.getBoundingClientRect();
+		var ttPos = this.getBoundingClientRect();
+
+		// Use previous position
+		if (this.fui.tooltipDirection) {
+			$el.removeClass('fui-tooltip-top fui-tooltip-bottom fui-tooltip-left fui-tooltip-right');
+			$el.addClass('fui-tooltip-'+this.fui.tooltipDirection);
+			types.top = false;
+			types.bottom = false;
+			types.left = false;
+			types.right = false;
+			types[this.fui.tooltipDirection] = true;
+		}
+		else {
+			if (types.top)
+				this.fui.tooltipDirection = 'top';
+			if (types.bottom)
+				this.fui.tooltipDirection = 'bottom';
+			if (types.left)
+				this.fui.tooltipDirection = 'left';
+			if (types.right)
+				this.fui.tooltipDirection = 'right';
+		}
 
 		$el.css({
 			width: '',
 			whiteSpace: 'nowrap'
 		});
-		tooltipRect = this.getBoundingClientRect();
-		var parentRect = this.parentNode.getBoundingClientRect();
+		ttPos = this.getBoundingClientRect();
+		var parentPos = this.parentNode.getBoundingClientRect();
 
 		// First check right and left
-		if (tooltipRect.right > winWidth || tooltipRect.left < 0) {
+		if (types.left && ttPos.right > winWidth && ttPos.width < parentPos.left - 10) {
+			$el.removeClass('fui-tooltip-left');
+			$el.addClass('fui-tooltip-right');
+		}
+		else if (types.right && ttPos.left < 0 && ttPos.width < winWidth - parentPos.left - 10) {
+			$el.removeClass('fui-tooltip-right');
+			$el.addClass('fui-tooltip-left');
+		}
+
+		ttPos = this.getBoundingClientRect();
+
+		if (ttPos.right > winWidth || ttPos.left < 0) {
 			$el.removeClass('fui-tooltip-top fui-tooltip-left fui-tooltip-right fui-tooltip-start fui-tooltip-end');
 			$el.addClass('fui-tooltip-bottom');
 
 			var totalWidth = $el.outerWidth();
 			var maxWidth;
-			if (parentRect.left < winWidth / 2) {
+			if (parentPos.left < winWidth / 2) {
 				$el.addClass('fui-tooltip-start');
-				maxWidth = winWidth - parentRect.left - 10;
+				maxWidth = winWidth - parentPos.left - 10;
 			}
 			else {
 				$el.addClass('fui-tooltip-end');
-				maxWidth = parentRect.left - 10;
+				maxWidth = parentPos.left - 10;
 			}
 
 			if (totalWidth < maxWidth)
@@ -76,15 +106,15 @@
 
 
 		// Recalculate position
-		tooltipRect = this.getBoundingClientRect();
+		ttPos = this.getBoundingClientRect();
 
 		// Now top and bottom
-		if (tooltipRect.top < 0) {
+		if (ttPos.top < 0) {
 			$el.removeClass('fui-tooltip-bottom');
 			$el.addClass('fui-tooltip-top');
 		}
 		// Now top and bottom
-		if (tooltipRect.bottom > winHeight.height) {
+		if (ttPos.bottom > winHeight.height) {
 			$el.removeClass('fui-tooltip-top');
 			$el.addClass('fui-tooltip-bottom');
 		}
@@ -93,7 +123,7 @@
 	};
 
 	fui.$(window).on('resize', fui.Tooltip.positionTooltips);
-	fui.$(function() {
+	fui.$(window).on('load', function() {
 		findTooltips();
 		fui.Tooltip.positionTooltips();
 	});

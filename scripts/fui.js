@@ -1,6 +1,7 @@
 var fui = fui || {};
 
 (function() {
+	// Store a reference to jQuery
 	fui.$ = jQuery;
 
 	var docClasses = document.documentElement.className;

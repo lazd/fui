@@ -90,8 +90,6 @@ $tooltipTargetOffset = -18px
 
 .fui-tooltip-target
 	display: inline-block
-	width: 0
-	height: 0
 	position: relative
 
 	vertical-align: middle
@@ -105,51 +103,48 @@ $tooltipTargetOffset = -18px
 		margin: 0
 		white-space: nowrap // Because target has width of 0, the message wraps every word
 
-	.fui-tooltip-top.fui-tooltip-
-		top: $tooltipArrowSize
+	// Move to misc
+	.fui-tooltip-noAnimate
+		transition: none !important
+
+	.fui-tooltip-top,
+	.fui-tooltip-bottom
+		&.fui-tooltip-start
+			left: $tooltipTargetOffset
+			right: auto
+
+		&.fui-tooltip-end
+			left: auto
+			right: $tooltipTargetOffset
+
+	.fui-tooltip-top
+		top: 100%
 		bottom: auto
-		left: $tooltipTargetOffset
+
+	.fui-tooltip-bottom
+		top: auto
+		bottom: 100%
+
+	.fui-tooltip-left
+		left: 100%
 		right: auto
 
-	.fui-tooltip-bottom.fui-tooltip-start
-		bottom: $tooltipArrowSize
-		top: auto
-		left: $tooltipTargetOffset
-		right: auto
+		&.fui-tooltip-start
+			top: $tooltipTargetOffset
+			bottom: auto
 
-	.fui-tooltip-top.fui-tooltip-end
-		top: $tooltipArrowSize
-		bottom: auto
+		&.fui-tooltip-end
+			top: auto
+			bottom: $tooltipTargetOffset
+
+	.fui-tooltip-right
 		left: auto
-		right: $tooltipTargetOffset
+		right: 100%
 
-	.fui-tooltip-bottom.fui-tooltip-end
-		bottom: $tooltipArrowSize
-		top: auto
-		left: auto
-		right: $tooltipTargetOffset
+		&.fui-tooltip-start
+			top: $tooltipTargetOffset
+			bottom: auto
 
-	.fui-tooltip-left.fui-tooltip-start
-		top: $tooltipTargetOffset
-		bottom: auto
-		left: $tooltipArrowSize
-		right: auto
-
-	.fui-tooltip-right.fui-tooltip-start
-		top: $tooltipTargetOffset
-		bottom: auto
-		left: auto
-		right: $tooltipArrowSize
-
-	.fui-tooltip-left.fui-tooltip-end
-		top: auto
-		bottom: $tooltipTargetOffset
-		left: $tooltipArrowSize
-		right: auto
-
-	.fui-tooltip-right.fui-tooltip-end
-		top: auto
-		bottom: $tooltipTargetOffset
-		left: auto
-		right: $tooltipArrowSize
-
+		&.fui-tooltip-end
+			top: auto
+			bottom: $tooltipTargetOffset
