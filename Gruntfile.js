@@ -1,6 +1,12 @@
 /*global module:false*/
 module.exports = function(grunt) {
-	// Project configuration.
+	var fuiIncludeOrder = [
+		'scripts/fui.js',
+		'scripts/fui.mixins.js',
+		'scripts/fui.util.js',
+		'scripts/components/*.js'
+	];
+
 	grunt.initConfig({
 	    pkg: grunt.file.readJSON('package.json'),
 		stylus: {
@@ -25,6 +31,11 @@ module.exports = function(grunt) {
 				files: {
 					'build/fui/fui.css': 'build/fui/fui.css'
 				}
+			},
+			js: {
+				files: {
+					'build/fui/scripts/fui.js': fuiIncludeOrder
+				}
 			}
 		},
 		copy: {
@@ -48,17 +59,21 @@ module.exports = function(grunt) {
 			}
 		},
 		watch: {
+			gruntfile: {
+				files: ['Gruntfile.js'],
+				tasks: []
+			},
 			stylus: {
 				files: ['styles/**/*.styl', 'styles/**/*.css'],
 				tasks: ['stylus', 'concat']
 			},
 			scripts: {
 				files: ['scripts/**/*.js'],
-				tasks: 'copy'
+				tasks: ['copy', 'concat']
 			},
 			examples: {
-				files: ['examples/**'],
-				tasks: 'copy'
+				files: ['examples/*.html'],
+				tasks: ['copy', 'concat']
 			}
 		}
 	});
