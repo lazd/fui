@@ -1,5 +1,4 @@
-.fui-checkbox,
-.fui-radio
+.fui-checkbox
 	display: inline-block
 	position: relative
 	margin: $widgetMargin
@@ -27,6 +26,9 @@
 		overflow: hidden; // We'll hide by moving out of the box
 		width: $checkBoxSize
 		height: $checkBoxSize
+		padding-left: $checkBoxSize // Move contents out of box
+
+		border-radius: 2px
 
 		color: $widgetFontColor
 		text-align: center
@@ -36,8 +38,8 @@
 
 		cursor: pointer
 
-		padding-left: $checkBoxSize // Move contents out of box
-
+		&:before
+			@extend .fuicon-check:before
 
 	input[type="checkbox"],
 	input[type="radio"]
@@ -61,11 +63,4 @@
 		margin-left: -1*$checkBoxSize - $checkBoxLabelMargin - 1
 
 		glow()
-
-.fui-checkbox
-	i
-		border-radius: 2px
-
-		&:before
-			@extend .fuicon-check:before
 

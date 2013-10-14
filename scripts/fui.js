@@ -1,6 +1,8 @@
 var fui = fui || {};
 
 (function() {
+	fui.$ = jQuery;
+
 	var docClasses = document.documentElement.className;
 	docClasses = docClasses ? docClasses.split(' ') : [];
 

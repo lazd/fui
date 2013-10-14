@@ -1,0 +1,155 @@
+$tooltipArrowSize = 8px
+$tooltipTargetOffset = -18px
+
+.fui-tooltip
+	@extend .fui-info
+
+	display: inline-block
+	box-sizing: border-box
+	position: relative
+
+	&:after
+		content: ''
+		display: block
+		position: absolute
+
+		border-width: $tooltipArrowSize
+		border-style: solid
+
+.fui-tooltip-top
+	@extend .fui-tooltip
+
+	&:after
+		top: -2*$tooltipArrowSize
+		left: 50%
+		margin-left: -1*$tooltipArrowSize
+
+		border-top-color: transparent
+		border-left-color: transparent
+		border-right-color: transparent
+
+.fui-tooltip-bottom
+	@extend .fui-tooltip
+
+	&:after
+		bottom -2*$tooltipArrowSize
+		left: 50%
+		margin-left: -1*$tooltipArrowSize
+
+		border-bottom-color: transparent
+		border-left-color: transparent
+		border-right-color: transparent
+
+.fui-tooltip-right
+	@extend .fui-tooltip
+
+	&:after
+		top: 50%
+		right: -2*$tooltipArrowSize
+		margin-top: -1*$tooltipArrowSize
+
+		border-top-color: transparent
+		border-bottom-color: transparent
+		border-right-color: transparent
+
+.fui-tooltip-left
+	@extend .fui-tooltip
+
+	&:after
+		top: 50%
+		left: -2*$tooltipArrowSize
+		margin-top: -1*$tooltipArrowSize
+
+		border-top-color: transparent
+		border-bottom-color: transparent
+		border-left-color: transparent
+
+.fui-tooltip-top,
+.fui-tooltip-bottom
+	&.fui-tooltip-start:after
+		left: $widgetBorderRadius*2
+		right: auto
+		margin-left: 0
+
+	&.fui-tooltip-end:after
+		left: auto
+		right: $widgetBorderRadius*2
+		margin-left: 0
+
+.fui-tooltip-left,
+.fui-tooltip-right
+	&.fui-tooltip-start:after
+		top: $widgetBorderRadius*2
+		bottom: auto
+		margin-top: 0
+
+	&.fui-tooltip-end:after
+		top: auto
+		bottom: $widgetBorderRadius*2
+		margin-top: 0
+
+.fui-tooltip-target
+	display: inline-block
+	width: 0
+	height: 0
+	position: relative
+
+	vertical-align: middle
+
+	.fui-tooltip,
+	.fui-tooltip-top,
+	.fui-tooltip-bottom,
+	.fui-tooltip-left,
+	.fui-tooltip-right
+		position: absolute
+		margin: 0
+		white-space: nowrap // Because target has width of 0, the message wraps every word
+
+	.fui-tooltip-top.fui-tooltip-
+		top: $tooltipArrowSize
+		bottom: auto
+		left: $tooltipTargetOffset
+		right: auto
+
+	.fui-tooltip-bottom.fui-tooltip-start
+		bottom: $tooltipArrowSize
+		top: auto
+		left: $tooltipTargetOffset
+		right: auto
+
+	.fui-tooltip-top.fui-tooltip-end
+		top: $tooltipArrowSize
+		bottom: auto
+		left: auto
+		right: $tooltipTargetOffset
+
+	.fui-tooltip-bottom.fui-tooltip-end
+		bottom: $tooltipArrowSize
+		top: auto
+		left: auto
+		right: $tooltipTargetOffset
+
+	.fui-tooltip-left.fui-tooltip-start
+		top: $tooltipTargetOffset
+		bottom: auto
+		left: $tooltipArrowSize
+		right: auto
+
+	.fui-tooltip-right.fui-tooltip-start
+		top: $tooltipTargetOffset
+		bottom: auto
+		left: auto
+		right: $tooltipArrowSize
+
+	.fui-tooltip-left.fui-tooltip-end
+		top: auto
+		bottom: $tooltipTargetOffset
+		left: $tooltipArrowSize
+		right: auto
+
+	.fui-tooltip-right.fui-tooltip-end
+		top: auto
+		bottom: $tooltipTargetOffset
+		left: auto
+		right: $tooltipArrowSize
+
